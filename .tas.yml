@@ -1,0 +1,15 @@
+postMerge :
+  preRun: 
+    command:
+      - yarn install
+  subModules:    
+      - name: framesync
+        path : "./packages/framesync/"
+        pattern: 
+          - "./src/_tests/test.ts"
+        framework : jest
+        preRun:
+          command:
+            - npm run build
+version : 2.0.0
+tier: large
