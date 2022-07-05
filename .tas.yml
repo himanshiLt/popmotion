@@ -11,5 +11,14 @@ postMerge :
         preRun:
           command:
             - npm run build
+
+      - name: popmotion
+        path : "./packages/popmotion/"
+        pattern: 
+          - "./src/**/__tests__/*.test.ts"
+        framework : jest
+        preRun:
+          command:
+            - npm run build
 version : 2.0.0
 tier: large
